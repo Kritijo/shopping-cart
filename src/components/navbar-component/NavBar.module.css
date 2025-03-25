@@ -6,6 +6,9 @@ nav {
   padding: 1.5rem;
   font-size: large;
   gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 h1 {
@@ -20,14 +23,17 @@ form {
 }
 
 input {
-  background-color: #ffffff;
+  background-color: ghostwhite;
+  color: #333;
   width: 100%;
   padding: 0.6em 1.2em;
   border-radius: 20px;
   border: none;
 }
-input:hover {
-  box-shadow: 0 0 2px;
+input:focus,
+input:focus-visible {
+  background-color: #ffffff;
+  outline: none;
 }
 
 .links {
@@ -44,7 +50,7 @@ a:hover {
   color: #646cff;
 }
 
-button {
+.button {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -55,23 +61,17 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+.button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
+.button:focus,
+.button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-img {
+.img {
   padding: 5px;
   height: 30px;
-}
-
-@media (prefers-color-scheme: dark) {
-  img {
-    filter: invert(1);
-  }
 }
 
 @media (max-width: 800px) {
