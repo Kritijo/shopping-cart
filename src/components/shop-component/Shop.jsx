@@ -1,4 +1,3 @@
-import NavBar from "../navbar-component/NavBar";
 import { useState, useEffect } from "react";
 import fetchProducts from "./fetchProducts";
 import Card from "../card-component/Card";
@@ -16,14 +15,11 @@ const Shop = () => {
     }, []);
 
     return (
-        <main>
-            <NavBar />
-            <section className={styles.productsGrid}>
-                {products.map((product) => (
-                    <Card key={product.id} product={product} />
-                ))}
-            </section>
-        </main>
+        <section className={styles.productsGrid}>
+            {products.map((product) => (
+                <Card key={product.id} product={product} />
+            ))}
+        </section>
     );
 };
 

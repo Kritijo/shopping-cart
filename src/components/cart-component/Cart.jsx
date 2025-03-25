@@ -1,11 +1,5 @@
-import NavBar from "../navbar-component/NavBar";
-
 const Cart = () => {
-    return (
-        <>
-            <NavBar></NavBar>
-        </>
-    );
+    return <></>;
 };
 
 export default Cart;

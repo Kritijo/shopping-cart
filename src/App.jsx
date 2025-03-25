@@ -1,8 +1,16 @@
 import "./App.css";
-import Home from "./components/home-component/Home";
+import { Outlet } from "react-router-dom";
+import NavBar from "./components/navbar-component/NavBar";
 
 function App() {
-    return <Home></Home>;
+    return (
+        <>
+            <NavBar></NavBar>
+            <main>
+                <Outlet />
+            </main>
+        </>
+    );
 }
 
 export default App;
