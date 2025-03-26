@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import fetchProducts from "./fetchProducts";
 import Card from "../card-component/Card";
-import styles from "./Shop.module.css";
+import Styles from "./Shop.module.css";
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
@@ -15,7 +15,7 @@ const Shop = () => {
     }, []);
 
     return (
-        <section className={styles.productsGrid}>
+        <section className={Styles.productsGrid}>
             {products.map((product) => (
                 <Card key={product.id} product={product} />
             ))}

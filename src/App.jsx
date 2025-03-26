@@ -1,11 +1,13 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "./components/navbar-component/NavBar";
 import Styles from "./App.module.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
     return (
         <>
-            <NavBar></NavBar>
+            <ScrollToTop />
+            <NavBar />
             <main className={Styles.main}>
                 <Outlet />
             </main>

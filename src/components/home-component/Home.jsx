@@ -1,4 +1,4 @@
-import styles from "./Home.module.css";
+import Styles from "./Home.module.css";
 import store from "../../assets/store.jpg";
 import mobileImg from "../../assets/store-mobile.jpg";
 import men from "../../assets/men.webp";
@@ -15,21 +15,21 @@ const HomePage = () => {
                     <source srcSet={mobileImg} media="(max-width:768px)" />
                     <img
                         src={store}
-                        className={styles.img}
+                        className={Styles.img}
                         alt="Shopping illustration"
                     />
                 </picture>
-                <div className={styles.textContainer}>
+                <div className={Styles.textContainer}>
                     <h2>Welcome to our Shop!</h2>
-                    <p className={styles.text}>
+                    <p className={Styles.text}>
                         Discover a wide range of stylish apparel and
                         accessories. Shop the latest trends and enjoy a seamless
                         shopping experience.
                     </p>
-                    <ul className={styles.categories}>
+                    <ul className={Styles.categories}>
                         <li>
                             <div>
-                                <img src={men} className={styles.productImg} />
+                                <img src={men} className={Styles.productImg} />
                             </div>
                             Men's Clothing
                         </li>
@@ -37,7 +37,7 @@ const HomePage = () => {
                             <div>
                                 <img
                                     src={gadgets}
-                                    className={styles.productImg}
+                                    className={Styles.productImg}
                                 />
                             </div>
                             Electronics
@@ -46,7 +46,7 @@ const HomePage = () => {
                             <div>
                                 <img
                                     src={jewellery}
-                                    className={styles.productImg}
+                                    className={Styles.productImg}
                                 />
                             </div>
                             Jewellery
@@ -55,14 +55,14 @@ const HomePage = () => {
                             <div>
                                 <img
                                     src={women}
-                                    className={styles.productImg}
+                                    className={Styles.productImg}
                                 />
                             </div>
                             Women's Clothing
                         </li>
                     </ul>
                     <Link to="/shop">
-                        <button className={styles.button}>
+                        <button className={Styles.button}>
                             Start Shopping
                         </button>
                     </Link>
