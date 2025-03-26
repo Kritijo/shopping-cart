@@ -1,10 +1,10 @@
 import styles from "./Home.module.css";
 import store from "../../assets/store.jpg";
 import mobileImg from "../../assets/store-mobile.jpg";
-import men from "../../assets/men.jpg";
-import gadgets from "../../assets/gadgets.jpg";
-import jewellery from "../../assets/jewellery.jpg";
-import women from "../../assets/women.jpg";
+import men from "../../assets/men.webp";
+import gadgets from "../../assets/gadgets.webp";
+import jewellery from "../../assets/jewellery.webp";
+import women from "../../assets/women.webp";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
