@@ -15,14 +15,14 @@ h1 {
   color: #333;
 }
 
-form {
+.form {
   width: 30vw;
   display: flex;
   gap: 10px;
   position: relative;
 }
 
-input {
+.input {
   background-color: ghostwhite;
   color: #333;
   width: 100%;
@@ -30,8 +30,8 @@ input {
   border-radius: 20px;
   border: none;
 }
-input:focus,
-input:focus-visible {
+.input:focus,
+.input:focus-visible {
   background-color: #ffffff;
   outline: none;
 }
@@ -41,12 +41,12 @@ input:focus-visible {
   gap: 30px;
 }
 
-a {
+.a {
   font-weight: 500;
   color: #333;
   text-decoration: inherit;
 }
-a:hover {
+.a:hover {
   color: #646cff;
 }
 
@@ -78,7 +78,7 @@ a:hover {
   nav {
     flex-direction: column;
   }
-  form {
+  .form {
     width: 90%;
   }
 }
