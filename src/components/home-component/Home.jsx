@@ -68,20 +68,6 @@ const HomePage = () => {
                     </Link>
                 </div>
             </section>
-
-            <footer className={styles.footer}>
-                <p>
-                    © {new Date().getFullYear()} VeryAwesomeShop. All rights
-                    reserved.
-                </p>
-                <p>Happy shopping! 🎉 Stay stylish & trendy with us.</p>
-                <p>
-                    Need help?{" "}
-                    <a href="#" className={styles.a}>
-                        Contact Support
-                    </a>
-                </p>
-            </footer>
         </>
     );
 };

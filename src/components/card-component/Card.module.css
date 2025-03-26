@@ -36,14 +36,15 @@
   background-color: steelblue;
 }
 
-.bttnInputDiv, .inputDiv {
+.bttnInputDiv,
+.inputDiv {
   display: flex;
   gap: 10px;
   justify-content: space-between;
   align-items: center;
 }
-.bttnInputDiv{
-  gap:20px;
+.bttnInputDiv {
+  gap: 20px;
 }
 
 .input {
