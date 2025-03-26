@@ -28,6 +28,7 @@
 .categories > li {
   border-radius: 10px;
   background-color: lavender;
+  color: #333;
   padding-bottom: 10px;
   font-weight: 500;
   display: grid;

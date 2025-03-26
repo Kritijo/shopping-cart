@@ -6,6 +6,10 @@
   gap: 5px;
 }
 
+.h3 {
+  color: #333;
+}
+
 .desc {
   font-size: small;
   color: #333;
