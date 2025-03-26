@@ -1,8 +1,19 @@
-async function fetchProducts() {
-    const res = await fetch("https://fakestoreapi.com/products");
-    const products = await res.json();
+async function fetchProducts(category) {
+    const url =
+        category && category != "all"
+            ? `https://fakestoreapi.com/products/category/${category}`
+            : `https://fakestoreapi.com/products`;
 
-    return products;
+    try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Failed to fetch: ${res.statusText}`);
+
+        const products = await res.json();
+        return products;
+    } catch (error) {
+        console.error("Error fetching products:", error);
+        return [];
+    }
 }
 
 export default fetchProducts;
