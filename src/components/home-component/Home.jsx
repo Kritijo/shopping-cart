@@ -6,19 +6,7 @@ import gadgets from "../../assets/gadgets.webp";
 import jewellery from "../../assets/jewellery.webp";
 import women from "../../assets/women.webp";
 import { Link } from "react-router-dom";
-
-const CreateLi = ({ src, text }) => {
-    return (
-        <li>
-            <Link to="/shop" className={Styles.a}>
-                <div>
-                    <img src={src} className={Styles.productImg} />
-                </div>
-                {text}
-            </Link>
-        </li>
-    );
-};
+import CreateLi from "./createli-component/CreateLi";
 
 const HomePage = () => {
     return (
@@ -40,10 +28,26 @@ const HomePage = () => {
                         shopping experience.
                     </p>
                     <ul className={Styles.categories}>
-                        <CreateLi src={men} text="Men's Clothing" />
-                        <CreateLi src={gadgets} text="Electronics" />
-                        <CreateLi src={jewellery} text="Jewellery" />
-                        <CreateLi src={women} text="Women's Clothing" />
+                        <CreateLi
+                            src={men}
+                            text="Men's Clothing"
+                            category="men's clothing"
+                        />
+                        <CreateLi
+                            src={gadgets}
+                            text="Electronics"
+                            category="electronics"
+                        />
+                        <CreateLi
+                            src={jewellery}
+                            text="Jewellery"
+                            category="jewelery"
+                        />
+                        <CreateLi
+                            src={women}
+                            text="Women's Clothing"
+                            category="women's clothing"
+                        />
                     </ul>
                     <Link to="/shop">
                         <button className={Styles.button}>

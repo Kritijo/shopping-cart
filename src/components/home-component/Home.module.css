@@ -33,17 +33,6 @@
   font-weight: 500;
   display: grid;
 }
-.productImg {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-}
-.a{
-  text-decoration: none;
-  color:inherit;
-}
 
 .button {
   align-self: center;
