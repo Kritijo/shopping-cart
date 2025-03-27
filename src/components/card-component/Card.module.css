@@ -39,6 +39,9 @@
 .button:hover {
   background-color: steelblue;
 }
+.clicked {
+  background-color: steelblue;
+}
 
 .bttnInputDiv,
 .inputDiv {

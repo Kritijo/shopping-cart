@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import Styles from "./NavBar.module.css";
 import magnify from "../../assets/magnify.svg";
+import { CartContext } from "../../contexts/CartContext";
+import { useContext } from "react";
 
 const NavBar = () => {
+    const { cart } = useContext(CartContext);
     return (
         <nav>
             <h1>Very Awesome Shop</h1>
@@ -24,7 +27,7 @@ const NavBar = () => {
                     Shop
                 </Link>
                 <Link to="/cart" className={Styles.a}>
-                    Cart
+                    Cart ({cart.length})
                 </Link>
             </div>
         </nav>
