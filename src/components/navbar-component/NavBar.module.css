@@ -74,6 +74,14 @@ h1 {
   height: 30px;
 }
 
+.cartLength {
+  background-color: #f76363;
+  border-radius: 50px;
+  padding: 1px 12px;
+  font-weight: bold;
+  color: white;
+}
+
 @media (max-width: 800px) {
   nav {
     flex-direction: column;

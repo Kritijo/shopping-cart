@@ -34,7 +34,7 @@ const Shop = () => {
         setContextCategory("all");
     }, [contextCategory, setContextCategory]);
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <p className={Styles.loading}>Loading...</p>;
     if (error) return <p>A network error was encountered</p>;
 
     return (

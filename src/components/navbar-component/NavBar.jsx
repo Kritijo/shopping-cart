@@ -27,7 +27,8 @@ const NavBar = () => {
                     Shop
                 </Link>
                 <Link to="/cart" className={Styles.a}>
-                    Cart ({cartMap.size})
+                    Cart{" "}
+                    <span className={Styles.cartLength}>{cartMap.size}</span>
                 </Link>
             </div>
         </nav>
