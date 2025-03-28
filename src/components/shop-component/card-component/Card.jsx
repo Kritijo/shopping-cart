@@ -1,10 +1,9 @@
-import { CartContext } from "../../contexts/CartContext";
-import { useContext, useState } from "react";
+import { CartContext } from "../../../contexts/CartContext";
+import { useContext } from "react";
 import Styles from "./Card.module.css";
 
 const Card = ({ product }) => {
     const { addToCart } = useContext(CartContext);
-    const [clicked, setClicked] = useState(false);
 
     return (
         <div className={Styles.productCard}>
@@ -16,15 +15,12 @@ const Card = ({ product }) => {
             <p className={Styles.desc}>{product.description}</p>
             <div className={Styles.bttnInputDiv}>
                 <button
-                    className={`${Styles.button} ${
-                        clicked ? Styles.clicked : ""
-                    }`}
+                    className={Styles.button}
                     onClick={() => {
                         addToCart(product);
-                        setClicked(true);
                     }}
                 >
-                    {!clicked ? "Add to cart" : "Added"}
+                    Add to Cart
                 </button>
                 <div className={Styles.inputDiv}>
                     <label htmlFor={`quantity-${product.id}`}>Qty:</label>

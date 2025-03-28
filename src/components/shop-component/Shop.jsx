@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import fetchProducts from "./fetchProducts";
-import Card from "../card-component/Card";
+import Card from "./card-component/Card";
 import Styles from "./Shop.module.css";
 import CategorySelector from "./category-component/CategorySelector";
 import { CategoryContext } from "../../contexts/CategoryContext";

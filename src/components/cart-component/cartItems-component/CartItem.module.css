@@ -1,9 +1,15 @@
 .productCard {
   display: grid;
+  grid-template-columns: 0.5fr 1fr;
   background-color: ghostwhite;
   border-radius: 10px;
   padding: 20px;
-  gap: 5px;
+  gap: 10px;
+}
+
+.textContainer {
+  display: grid;
+  gap: 10px;
 }
 
 .h3 {
@@ -32,38 +38,17 @@
   padding: 10px;
   border-radius: 10px;
   border: none;
-  width: 100%;
+  width: 60%;
   background-color: cadetblue;
   font-size: 16px;
+  cursor: pointer;
 }
 .button:hover {
   background-color: steelblue;
 }
-.clicked {
-  background-color: steelblue;
-}
 
-.bttnInputDiv,
-.inputDiv {
-  display: flex;
-  gap: 10px;
-  justify-content: space-between;
-  align-items: center;
-}
-.bttnInputDiv {
-  gap: 20px;
-}
-
-.input {
-  width: 100%;
-  background-color: #f7ebda;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-  color: #333;
-}
-.input:focus {
-  outline: none;
-  border: 2px solid cadetblue;
-  background-color: white;
+@media (max-width: 600px) {
+  .productCard {
+    grid-template-columns: auto;
+  }
 }
