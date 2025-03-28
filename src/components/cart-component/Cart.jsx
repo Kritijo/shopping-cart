@@ -5,18 +5,24 @@ import CartItem from "./cartItems-component/CartItem";
 import Checkout from "./checkout-component/Checkout";
 
 const Cart = () => {
-    const { cart } = useContext(CartContext);
+    const { cartMap } = useContext(CartContext);
+    const cartArray = Array.from(cartMap.values());
+
     return (
         <section className={Styles.cart}>
-            {cart.length === 0 ? (
+            {cartMap.size === 0 ? (
                 <h3>Your cart is empty!</h3>
             ) : (
                 <>
-                    <Checkout cart={cart} />
+                    <Checkout cart={cartArray} />
                     <h3 className={Styles.h3}>Your Cart Items:</h3>
                     <div className={Styles.cartItems}>
-                        {cart.map((product) => (
-                            <CartItem key={product.id} product={product} />
+                        {cartArray.map(({ product, quantity }) => (
+                            <CartItem
+                                key={product.id}
+                                product={product}
+                                quantity={quantity}
+                            />
                         ))}
                     </div>
                 </>

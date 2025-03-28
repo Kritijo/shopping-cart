@@ -2,8 +2,9 @@ import Styles from "./CartItem.module.css";
 import { CartContext } from "../../../contexts/CartContext";
 import { useContext } from "react";
 
-const CartItem = ({ product }) => {
-    const { removeFromCart } = useContext(CartContext);
+const CartItem = ({ product, quantity }) => {
+    const { removeFromCart, updateQuantity } = useContext(CartContext);
+
     return (
         <div className={Styles.productCard}>
             <div>
@@ -12,16 +13,20 @@ const CartItem = ({ product }) => {
             <div className={Styles.textContainer}>
                 <h3 className={Styles.h3}>{product.title}</h3>
                 <h3 className={Styles.h3}>${product.price}</h3>
-                <div className={Styles.inputDiv}>
-                    <label htmlFor={`quantity-${product.id}`}>Qty:</label>
-                    <input
-                        type="number"
-                        min={1}
-                        id={`quantity-${product.id}`}
-                        placeholder="1"
-                        className={Styles.input}
-                    ></input>
-                </div>
+                <select
+                    id={`quantity-${product.id}`}
+                    value={quantity}
+                    onChange={(e) =>
+                        updateQuantity(product.id, Number(e.target.value))
+                    }
+                    className={Styles.input}
+                >
+                    {Array.from({ length: 10 }, (_, i) => (
+                        <option key={i + 1} value={i + 1}>
+                            {i + 1}
+                        </option>
+                    ))}
+                </select>
                 <p className={Styles.desc}>{product.description}</p>
                 <div className={Styles.bttnInputDiv}>
                     <button

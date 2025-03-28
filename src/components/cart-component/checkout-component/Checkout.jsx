@@ -1,7 +1,10 @@
 import Styles from "./Checkout.module.css";
 
 const Checkout = ({ cart }) => {
-    const subtotal = cart.reduce((sum, product) => sum + product.price, 0);
+    const subtotal = cart.reduce(
+        (sum, { product, quantity }) => sum + product.price * quantity,
+        0
+    );
     const tax = subtotal * 0.1;
     const shipping = subtotal > 50 ? 0 : 5;
     const total = subtotal + tax + shipping;

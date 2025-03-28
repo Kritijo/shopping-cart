@@ -39,28 +39,3 @@
 .button:hover {
   background-color: steelblue;
 }
-
-.bttnInputDiv,
-.inputDiv {
-  display: flex;
-  gap: 10px;
-  justify-content: space-between;
-  align-items: center;
-}
-.bttnInputDiv {
-  gap: 20px;
-}
-
-.input {
-  width: 100%;
-  background-color: #f7ebda;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-  color: #333;
-}
-.input:focus {
-  outline: none;
-  border: 2px solid cadetblue;
-  background-color: white;
-}

@@ -5,7 +5,7 @@ import { CartContext } from "../../contexts/CartContext";
 import { useContext } from "react";
 
 const NavBar = () => {
-    const { cart } = useContext(CartContext);
+    const { cartMap } = useContext(CartContext);
     return (
         <nav>
             <h1>Very Awesome Shop</h1>
@@ -27,7 +27,7 @@ const NavBar = () => {
                     Shop
                 </Link>
                 <Link to="/cart" className={Styles.a}>
-                    Cart ({cart.length})
+                    Cart ({cartMap.size})
                 </Link>
             </div>
         </nav>
