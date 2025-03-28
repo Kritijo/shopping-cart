@@ -38,13 +38,40 @@
   padding: 10px;
   border-radius: 10px;
   border: none;
-  width: 60%;
+  width: 200px;
   background-color: cadetblue;
   font-size: 16px;
   cursor: pointer;
 }
 .button:hover {
   background-color: steelblue;
+}
+
+.bttnInputDiv,
+.inputDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+.bttnInputDiv {
+  gap: 20px;
+}
+.input {
+  width: 80px;
+  background-color: #f7ebda;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #333;
+}
+.input:hover {
+  background-color: white;
+}
+.input:focus {
+  outline: none;
+  border: 2px solid cadetblue;
+  background-color: white;
 }
 
 @media (max-width: 600px) {

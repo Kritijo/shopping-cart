@@ -9,7 +9,7 @@ const Checkout = ({ cart }) => {
     return (
         <div className={Styles.checkout}>
             <div>Total Items: {cart.length}</div>
-            <div>Subtotal: ${subtotal}</div>
+            <div>Subtotal: ${subtotal.toFixed(2)}</div>
             <div>Tax: ${tax.toFixed(2)}</div>
             <div>Shipping: ${shipping}</div>
             <hr />
