@@ -15,27 +15,6 @@ h1 {
   color: #333;
 }
 
-.form {
-  width: 30vw;
-  display: flex;
-  gap: 10px;
-  position: relative;
-}
-
-.input {
-  background-color: ghostwhite;
-  color: #333;
-  width: 100%;
-  padding: 0.6em 1.2em;
-  border-radius: 20px;
-  border: none;
-}
-.input:focus,
-.input:focus-visible {
-  background-color: #ffffff;
-  outline: none;
-}
-
 .links {
   display: flex;
   gap: 30px;
@@ -48,30 +27,6 @@ h1 {
 }
 .a:hover {
   color: #646cff;
-}
-
-.button {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: 20px;
-  border: 1px solid transparent;
-  background-color: inherit;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-.button:hover {
-  border-color: #646cff;
-}
-.button:focus,
-.button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.img {
-  padding: 5px;
-  height: 30px;
 }
 
 .cartLength {
